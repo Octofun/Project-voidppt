@@ -1,0 +1,163 @@
+<!doctype html>
+
+<!--
+  This is a simple example / template impress.js slide show. The goal is to be
+  easier to read for a first timer than the official and very feature rich
+  demo by bartaz (http://bartaz.github.io/impress.js/). It's also a very
+  traditional presentation that looks like slides (square screens with bullet
+  points...), again to make a first timer feel more at home. From this simple
+  presentation you can then go on to more powerful impress.js presentations!
+  
+  This example is hopefully helpful for people that want to create both
+  simple and (eventually) awesome presentations in impress.js and comfortable
+  doing that directly in HTML.
+  
+  By: @henrikingo (Still based on the HTML from bartaz' demo.)  
+    
+-->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Project-Void</title>
+    <meta name="description" content="Simple.Powerful" />
+    <meta name="author" content="Henrik Ingo" />
+    <link href="css/impress-common.css" rel="stylesheet" />
+    <link href="css/3D-rotations.css" rel="stylesheet" />
+</head>
+
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress" data-transition-duration="2000">
+
+
+    <div id="overview" class="step overview" data-x="1350" data-y="100" data-z="100" data-scale="3" data-rotate-y="90">
+        <img src="assets/favicon.gif" alt="Project-Void" width="500" height="500">
+    </div>
+    <div id="overview2" class="step overview" data-x="2018" data-y="106" data-z="3018" data-scale="2">
+        <h1>Group Members</h1>
+        <p>Diya George</br>
+            Krishnapriya S</br>
+            Maria Raj</br>
+            Peyara Nando</br>
+        </p>
+         
+    </div>
+
+    <div id="step-1" class="step" data-x="0" data-y="0" data-z="0">
+         <h1>Introduction</h1>
+         <ul>
+             <p>
+                The human mind now has an attention span of 8 seconds.
+                We would like to retain that attention and keep the user engaged.
+                So we decided to introduce noise cancellation.
+             </p>
+         </ul>
+    </div>
+
+    <div id="step-2" class="step" data-x="420" data-y="-70" data-z="-250" data-rotate-z="45" data-rotate-y="-45" data-rotate-order="zyx">
+        <h1>Problem statement
+        </h1>
+        <ul>
+        <p>The usage of video conferencing has spiked, due to WFH conditions.
+        This means there is a shift in work environment and there is a push to maintain the status quo.
+        It becomes absolutely necessary to maintain good audio quality.</p>
+        </ul>
+  
+    </div>
+
+    <div id="step-3" class="step" data-x="700" data-y="350" data-z="-350" data-rotate-z="90" data-rotate-y="-90" data-rotate-order="zyx">
+        <h1>Literature Survey</h1>
+
+        <ul>
+            <li>krisp
+                <ul>
+                <li>It is a noise cancelling software for your microphone </li>
+                <li>Powered by a Deep Neural Network</li>
+                
+                </ul>
+            </li>
+            <li>Jami
+                <ul>
+                <li>Jami is a similar p2p video application with focus on Privacy,FOSS,Distributed. </li>
+                </ul>
+            </li>
+           
+        </ul>
+    </div>
+
+    <div id="step-4" class="step" data-x="422" data-y="780" data-z="-250" data-rotate-z="135" data-rotate-y="-135" data-rotate-order="zyx">
+        <h1>Literature Survey</h1>
+
+    <ul>
+        <li>Cisco Webex
+            <ul>
+            <li>Uses artificial intelligence to filter noise from conversation. </li>
+            
+            
+            </ul>
+        </li>
+        <li>Nvidia RTX Voice
+
+            <ul>
+            <li>It is a plugin that leverages NVIDIA RTX GPUs and their AI capabilities.</li>
+            </ul>
+        </li>
+       
+    </ul>
+    </div>
+
+    <div id="step-5" class="step" data-x="0" data-y="702" data-z="0" data-rotate-z="180" data-rotate-y="-180" data-rotate-order="zyx">
+        <h1>Solution Description</h1>
+
+        <ul>
+            <li>Video chat application with inbuilt noise suppression based on Jean-Marc Valin's work RNNoise</li>
+            <li>Hybrid approach as it tries to get DNN quality with DSP complexity</li>
+            <li>Embedded the RNNoise library using Emscripten and Webassembly</li>
+            <li>Edge based audio Processing</li>
+            <li>A Peer to Peer Web-Video Application which uses the Webrtc framework to interact with the user</li>
+        </ul>
+    </div>
+
+    <div id="step-6" class="step" data-x="379" data-y="780" data-z="270" data-rotate-z="135" data-rotate-y="-225" data-rotate-order="zyx">
+        <h1>DESIGN</h1>
+        <img src="assets/Input Audio.gif" alt="Input audio" class="magic">
+    </div>
+
+    <div id="step-7" class="step" data-x="700" data-y="350" data-z="350" data-rotate-z="90" data-rotate-y="-270" data-rotate-order="zyx">
+        <h1>Screenshots</h1>
+
+    </div>
+
+    <div id="step-8" class="step" data-x="379" data-y="-70" data-z="270" data-rotate-z="45" data-rotate-y="-315" data-rotate-order="zyx">
+         <h1>Conclusion</h1>
+         <p>
+            <li>The noisy datasets which are available are of artificial quality.The performance is expected to improve over time as we obtain better datasets</li>
+            <li>Noise for everyone is different in different contexts</li>
+            <li>A combination of RNN with Digital Signal Processing techniques yield the quality of a DNN without the CPU throttling</li>
+            
+        </p>
+    </div>
+
+    <div id="step-9" class="step" data-x="700" data-y="350" data-z="-350" data-rotate-z="90" data-rotate-y="-90" data-rotate-order="zyx">
+        <h1>Reference</h1>
+    </div>
+
+    <div id="step-10" class="step" data-x="422" data-y="780" data-z="-250" data-rotate-z="135" data-rotate-y="-135" data-rotate-order="zyx"
+        data-goto-next="overview">
+        <h1>Thankyou</h1>
+    </div>
+</div>
+
+<div id="impress-toolbar"></div>
+<div id="impress-help"></div>
+
+<script type="text/javascript" src="js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
