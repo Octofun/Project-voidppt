@@ -129,11 +129,36 @@
     </div>
 
     <div id="step-7" class="step" data-x="700" data-y="350" data-z="350" data-rotate-z="90" data-rotate-y="-270" data-rotate-order="zyx">
-        <h1>Screenshots</h1>
+        <h1>RNNoise Design</h1>
+        <ul>
+            <li>The concept is basesd on traditional DSP approach</li>
+            <li>Divide the spectrum into 22 "critical bands"</li>
+            <li>RNN attenuates each of these bands</li>
+            <li>Uses a puitch filter to drop noise in between harmonics</li>
+        </ul>
+        <img src="assets/bands.jpg" alt="Input audio" class="bands">
 
     </div>
+    <div id="step-8" class="step" data-x="100" data-y="350" data-z="200" data-rotate-z="45" data-rotate-y="-27" data-rotate-order="xyz">
+        <h1>Complexity based on 48 khz</h1>
+        <ul>
+            <li>A Audio file of 48khz requires</li>
+            <ul>
+                <li>215 neurons with approx of 88k weights</li>
+                <li>Total complexity around 40 MFLOPS</li>
+            </ul>
+            <li>Unvectorized C Code</li>
+            <ul>
+                <li>1.3% CPUS on traditional x86 Intel Arch</li>
+                <li>In real time with it running as a WASM module in the Browser</li>
+                <li>Slight hiccups in Mozilla Firefox</li>
+            </ul>
+        </ul>
+    </div>
 
-    <div id="step-8" class="step" data-x="379" data-y="-70" data-z="270" data-rotate-z="45" data-rotate-y="-315" data-rotate-order="zyx">
+    
+
+    <div id="step-9" class="step" data-x="379" data-y="-70" data-z="270" data-rotate-z="45" data-rotate-y="-315" data-rotate-order="zyx">
          <h1>Conclusion</h1>
          <p>
             <li>The noisy datasets which are available are of artificial quality.The performance is expected to improve over time as we obtain better datasets</li>
@@ -143,7 +168,7 @@
         </p>
     </div>
 
-    <div id="step-9" class="step" data-x="700" data-y="350" data-z="-350" data-rotate-z="90" data-rotate-y="-90" data-rotate-order="zyx">
+    <div id="step-10" class="step" data-x="700" data-y="350" data-z="-350" data-rotate-z="90" data-rotate-y="-90" data-rotate-order="zyx">
         <h1>Reference</h1>
         <li>RNNoise: Learning Noise Suppression</li>
         <li>A Hybrid DSP/Deep Learning Approach to
@@ -153,7 +178,7 @@
         
     </div>
 
-    <div id="step-10" class="step" data-x="422" data-y="780" data-z="-250" data-rotate-z="135" data-rotate-y="-135" data-rotate-order="zyx"
+    <div id="step-11" class="step" data-x="422" data-y="780" data-z="-250" data-rotate-z="135" data-rotate-y="-135" data-rotate-order="zyx"
         data-goto-next="overview">
         <li>Audio and Acoustics Research Group
             https://www.microsoft.com/en-us/research/group/audio-and-acoustics-research-group/#!publications</li>
@@ -161,7 +186,9 @@
             Compiling an Existing C Module to WebAssembly
             https://developer.mozilla.org/en-US/docs/WebAssembly/existing_C_to_wasm
         </li>
+        <li>Implementation on heroku  https://murmuring-hamlet-57593.herokuapp.com/</li>
     </div>
+    
 </div>
 
 <div id="impress-toolbar"></div>
